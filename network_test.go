@@ -89,7 +89,7 @@ func TestGetIP(t *testing.T) {
 			//
 			request:  request2,
 			limiter:  limiter2,
-			expected: net.ParseIP("9.9.9.9").To4(),
+			expected: net.ParseIP("6.6.6.6").To4(),
 		},
 		{
 			//
@@ -201,7 +201,7 @@ func TestGetIPKey(t *testing.T) {
 			//
 			request:  request2,
 			limiter:  limiter2,
-			expected: "9.9.9.9",
+			expected: "6.6.6.6",
 		},
 		{
 			//

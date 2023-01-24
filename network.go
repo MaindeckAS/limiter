@@ -111,8 +111,8 @@ func getIPFromXFFHeader(r *http.Request) net.IP {
 		parts = append(parts, strings.Split(header, ",")...)
 	}
 
-	for i := range parts {
-		part := strings.TrimSpace(parts[i])
+	if len(parts) > 0 {
+		part := strings.TrimSpace(parts[len(parts)-1])
 		ip := net.ParseIP(part)
 		if ip != nil {
 			return ip
